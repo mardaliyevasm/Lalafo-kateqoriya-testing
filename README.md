@@ -1,63 +1,120 @@
 # Lalafo-kateqoriya-testing
-# Lalafo saytında “Elektronika” bölməsi üzrə yoxlanış
 
-## ✅ Pozitiv yoxlanışlar
+## ✅ Pozitiv testlər
 
-### 1. Kateqoriyaya keçid
-İstifadəçi **Elektronika → Telefonlar** seçir → düzgün siyahı açılır
+### Test 1: Kateqoriyaya keçid
+**Nə etdim:**
+- Elektronika → Telefonlar bölməsini seçdim  
 
-### 2. Əlaqə düyməsi
-“Zəng et” və ya “Mesaj yaz” düymələri işləyir
+**Nə gözlədim:**
+- Telefon elanlarının siyahısı açılmalıdır  
 
-### 3. Elanların görünməsi
-Telefon elanları şəkil, qiymət və başlıq ilə düzgün göstərilir
+**Nəticə:**
+- Siyahı düzgün açıldı ✅  
 
-### 4. Elan detalları
-Elana klik → tam məlumat (şəkil, təsvir, əlaqə) açılır
 
-### 5. Favoritə əlavə etmə
-Elanı **Seçilmişlərə** əlavə etmək olur
+### Test 2: Əlaqə düymələri
+**Nə etdim:**
+- Elan daxilində “Zəng et” və “Mesaj yaz” düymələrinə klik etdim  
 
-### 6. Filtrləmə
-Qiymət aralığı (məs: **500–1000 AZN**) düzgün işləyir
+**Nə gözlədim:**
+- Əlaqə funksiyaları işləməlidir  
+
+**Nəticə:**
+- Hər iki düymə düzgün işləyir ✅  
+
+
+### Test 3: Elanların görünməsi
+**Nə etdim:**
+- Telefon elanlarının siyahısına baxdım  
+
+**Nə gözlədim:**
+- Şəkil, qiymət və başlıq düzgün göstərilməlidir  
+
+**Nəticə:**
+- Bütün məlumatlar düzgün göstərildi ✅  
+
+
+### Test 4: Elan detalları
+**Nə etdim:**
+- Hər hansı elana klik etdim  
+
+**Nə gözlədim:**
+- Tam məlumat (şəkil, təsvir, əlaqə) açılmalıdır  
+
+**Nəticə:**
+- Məlumatlar düzgün açıldı ✅  
+
+
+### Test 5: Favoritə əlavə etmə
+**Nə etdim:**
+- Elanı Seçilmişlərə əlavə etdim  
+
+**Nə gözlədim:**
+- Elan favoritlərə əlavə olunmalıdır  
+
+**Nəticə:**
+- Uğurla əlavə olundu ✅  
+
+
+### Test 6: Filtrləmə
+**Nə etdim:**
+- Qiymət filtrini 500–1000 AZN aralığında tətbiq etdim  
+
+**Nə gözlədim:**
+- Yalnız bu aralıqda elanlar göstərilməlidir  
+
+**Nəticə:**
+- Filtr düzgün işləyir ✅  
 
 
 ---
 
-## ❌ Negativ yoxlanışlar (Buglar)
+## ❌ Negativ testlər (Buglar)
 
-### 1. Axtarış problemi
-**Addımlar:**
-- Marka (məs: *iPhone 15*) seçilir  
+### Test 7: Marka üzrə axtarış
+**Nə etdim:**
+- Marka olaraq iPhone 15 seçdim  
 
-**Gözlənilən nəticə:**
-- Yalnız seçilmiş marka göstərilməlidir  
+**Nə gözlədim:**
+- Yalnız iPhone 15 elanları çıxmalıdır  
 
-**Faktiki nəticə:**
-- Başqa markalar da görünür ❌
+**Nəticə:**
+- Digər markalar da göstərildi ❌ (Bug)  
 
 
-### 2. Yanlış axtarış inputu
-**Addımlar:**
-- “@@@@” kimi dəyərsiz input daxil edilir  
+### Test 8: Yanlış input
+**Nə etdim:**
+- Axtarışa “@@@@” daxil etdim  
 
-**Gözlənilən nəticə:**
+**Nə gözlədim:**
 - Sistem error verməməlidir  
 
-
-### 3. Geriyə qayıtma problemi
-**Addımlar:**
-1. Elektronika kateqoriyasını aç  
-2. Hər hansı məhsul elanına klik et  
-3. Açılan səhifədə yuxarıdakı “geri” düyməsinə klik et  
-
-**Gözlənilən nəticə:**
-- İstifadəçi əvvəlki səhifəyə qayıtmalıdır  
-
-**Faktiki nəticə:**
-- Geri düyməsi işləmir ❌  
+**Nəticə:**
+- Sistem stabil qaldı / error vermədi ✅  
 
 
-### 4. Filtr problemi
-**Problem:**
-- “Telefonlar” alt kateqoriyasında **marka filtri yoxdur** ❌
+### Test 9: Geri düyməsi
+**Nə etdim:**
+1. Elektronika bölməsini açdım  
+2. Bir elana klik etdim  
+3. Geri düyməsinə basdım  
+
+**Nə gözlədim:**
+- Əvvəlki səhifəyə qayıtmalıdır  
+
+**Nəticə:**
+- Geri düyməsi işləmir ❌ (Bug)  
+
+
+### Test 10: Marka filtri
+**Nə etdim:**
+- “Telefonlar” alt kateqoriyasında filtrlərə baxdım  
+
+**Nə gözlədim:**
+- Marka üzrə filtr mövcud olmalıdır  
+
+**Nəticə:**
+- Marka filtri yoxdur ❌ (Bug)
+
+
